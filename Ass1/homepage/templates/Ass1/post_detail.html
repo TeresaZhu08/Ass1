@@ -1,0 +1,21 @@
+{% extends 'Ass1/base.html' %}
+{% block content %}
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ object.author }}</a>
+                <small class="text-muted">{{ object.date|date:"d F, Y, H:i" }}</small>
+            </div>
+            <h2 class="article-title">{{ object.title }}</h2>
+            <p class="article-content">{{ object.content }}</p>
+            {% if object.author == user %}
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        <a href="{% url 'homepage' %}">Go back to MYPage</a>
+                    </small>
+                </div>
+            {% endif %}
+        </div>
+    </article>
+{% endblock content%}
