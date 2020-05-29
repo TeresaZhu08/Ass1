@@ -147,6 +147,14 @@
             </div>
             <div class="col-md-4">
                 <div class="content-section">
+                    <h3>Friends</h3>
+                    {% for user in users %}
+                        <a href="{% url 'user_profile'  %}">
+                            {{ user.username}}
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="content-section">
                     <h3>LINKS</h3>
                     <ul class="list-group">
                         <li class="list-group-item list-group-item-light">TRENDING</li>
@@ -154,7 +162,6 @@
                         <li class="list-group-item list-group-item-light">SPORTS</li>
                         <li class="list-group-item list-group-item-light">FUN</li>
                         <li class="list-group-item list-group-item-light">ENTERTAINMENT</li>
-
                 </ul>
                 </div>
             </div>
