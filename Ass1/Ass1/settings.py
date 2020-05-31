@@ -15,6 +15,7 @@ import sentry_sdk
 import raven
 from sentry_sdk.integrations.django import DjangoIntegration
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -46,8 +47,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'django_celery_results',
     'widget_tweaks',
-    'homepage.apps.HomepageConfig',
-    'users.apps.UsersConfig',
+    'raven.contrib.django.raven_compat',
 ]
 
 MIDDLEWARE = [
@@ -160,7 +160,7 @@ sentry_sdk.init(
 
 RAVEN_CONFIG = {
     'environment': 'production',  # optional but very useful
-    'release': raven.fetch_git_sha(BASE_DIR),  # optional but very useful
+    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),  # optional but very useful
     'dsn': "https://749fef8cc7e84fcd8c7eb07818b430e8@o400253.ingest.sentry.io/5258529",  # DSN can be obtained from sentry panel
 }
 
