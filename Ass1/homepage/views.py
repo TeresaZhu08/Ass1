@@ -1,18 +1,9 @@
-from django.shortcuts import render
 from __future__ import absolute_import, unicode_literals
+from django.shortcuts import render
 from .models import Post
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.http import HttpResponseNotFound
-from sentry_sdk import capture_message
-
-
-def homepage_not_found_view(*args, **kwargs):
-    capture_message("Page not found!", level="error")
-
-    # return any response here, e.g.:
-    return HttpResponseNotFound("Not found")
 
 
 def home(request):

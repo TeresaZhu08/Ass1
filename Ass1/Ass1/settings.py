@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 from __future__ import absolute_import, unicode_literals
 import os
 import sentry_sdk
+import raven
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g4o6!sue&4^dboao+(7trs=(xxgy2sganl@w61b*2kq^5tb4&!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -44,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'django_celery_results',
+    'widget_tweaks',
+    'homepage.apps.HomepageConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +70,7 @@ TEMPLATES = [
         ,
         'APP_DIRS': True,
         'OPTIONS': {
+            "debug": True,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -144,15 +149,29 @@ INTERNAL_IPS = [
 ]
 
 sentry_sdk.init(
-    dsn="https://<key>@<organization>.ingest.sentry.io/<project>",
+    dsn="https://749fef8cc7e84fcd8c7eb07818b430e8@o400253.ingest.sentry.io/5258529",
     integrations=[DjangoIntegration()],
+
 
     # If you wish to associate users to errors (assuming you are using
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
 
-CELERY_RESULT_BACKEND = 'django-db'
+RAVEN_CONFIG = {
+    'environment': 'production',  # optional but very useful
+    'release': raven.fetch_git_sha(BASE_DIR),  # optional but very useful
+    'dsn': "https://749fef8cc7e84fcd8c7eb07818b430e8@o400253.ingest.sentry.io/5258529",  # DSN can be obtained from sentry panel
+}
+
+# Celery
+BROKER_URL = 'redis://localhost:6379'
+BROKER_TRANSPORT = 'redis'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
 # celery setting.
 CELERY_CACHE_BACKEND = 'default'
 

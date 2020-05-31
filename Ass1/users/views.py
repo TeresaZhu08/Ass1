@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
 from __future__ import absolute_import, unicode_literals
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .userform import UserSignUpForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
