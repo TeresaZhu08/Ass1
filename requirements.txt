@@ -4,7 +4,6 @@ asgiref==3.2.5
 billiard==3.6.3.0
 bottle==0.12.18
 celery==4.3.0
-celery-with-redis==3.0
 certifi==2020.4.5.1
 dj-config-url==0.1.1
 Django==3.0.4
