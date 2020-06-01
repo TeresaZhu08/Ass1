@@ -1,0 +1,98 @@
+April 13th 2020 - Started @ 12:00 pm
+Going to create the enviornment for django and create homepage
+Estimate: 5 hours
+
+Everything create successfully
+Stop @ 17:00 pm
+
+April 14th 2020 - 13:00 pm
+Create SignUp page
+Estimate 4 hours
+
+Everything create successfully
+Stop @ 17:00 pm
+
+April 16th 2020 - 20:00 pm
+Create LogIn page
+Estimate 5 hours
+
+21:30 Got a bug, cannot add email address for a new user
+22:45 Fix the bug
+
+23:00 Test to add a new user
+Actual time token 3.5hours
+
+April 20th 2020 - 11:00 am
+Create Post page
+Estimate 3 hours
+
+Everything create successfully
+Stop @ 14:00 pm
+
+April 22th 2020 - 14:00 pm
+Create Search function
+Estimate 4 hours
+
+15:00 Get stuck
+17:00 Still try to fix
+18:00 Give up 
+Stop @ 18:00 pm
+
+April 24th 2020 - 18:00 pm
+Modify Post page add new button for delete and update post
+Estimate 4.5 hours
+
+Everything create successfully
+Stop @ 22:30 pm
+
+May 13th 2020 - 12:00 pm
+Set up sentry and raven
+Estimate 2.5 hours
+
+12:30 Cannot connect to sentry
+13:00 Connect to sentry successfully
+13:15 Find error on sentry report
+14:00 Fix all errors
+14:15 Test raven
+Stop @ 14:30 pm
+
+May 17th 2020 - 19:00 pm
+Set up celery and redis
+Estimate 4 hours
+
+20:00 Cannot connect celery and redis
+20:45 Fix the error and connect celery and redis to project successfully
+21:00 Find error on sentry report
+22:00 Fix the error
+22:15 Run redis-server
+22:45 Run celery worker
+Stop @ 23:00 pm
+
+May 27th 2020 - 11:00 am
+Connet to Heroku
+Estimate 3 hours
+
+12:00 Cannot connect to Heroku
+14:00 Still have problems to connect to Heroku
+Stop @ 14:00 pm
+
+May 29th 2020 - 10:00 am
+Try to connect to Heroku again
+Estimate 3 hours
+
+13:00 Still have problems to connect to Heroku
+Stop @ 13:00 pm
+
+May 31th 2020 - 19:00 am
+Try to connect to Heroku again
+Estimate 3 hours
+
+13:00 Still have problems to connect to Heroku
+Stop @ 22:00 pm
+
+June 1st 2020 - 10:00 am
+Try to connect to Heroku again
+Estimate 5 hours
+
+13:00 Still have problems to connect to Heroku
+Stop @ 15:00 pm
