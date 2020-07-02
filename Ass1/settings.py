@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'mypage.apps.MypageConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +145,17 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
 sentry_sdk.init(
     dsn="https://d73fce55de2b4d6ebb49fb8032c52543@o400253.ingest.sentry.io/5305348",
     integrations=[DjangoIntegration()],
@@ -152,6 +164,7 @@ sentry_sdk.init(
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
+
 
 # CELERY
 BROKER_URL = 'redis://127.0.0.1:6379/0'
