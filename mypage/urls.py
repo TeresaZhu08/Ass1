@@ -1,6 +1,10 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
+from .api import PostViewSet
 
+router = routers.DefaultRouter()
+router.register('api/posts', PostViewSet, 'posts')
 
 urlpatterns = [
     path('', PostListView.as_view(), name='MyPage'),
@@ -9,4 +13,8 @@ urlpatterns = [
     path('post/<int:pk>/update', PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
+    path('', include(router.urls)),
 ]
+
+
+
