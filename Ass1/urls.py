@@ -31,6 +31,7 @@ urlpatterns = [
     path('sentry-debug/', trigger_error),
     path('admin/', admin.site.urls),
     path('', include('mypage.urls')),
+    path('', include('frontend.urls')),
     path('signup/', user_views.signup, name='signup'),
     path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
