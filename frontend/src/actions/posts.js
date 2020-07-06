@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createMessage, returnErrors } from './messages';
 
-import { GET_POSTS, DELETE_POSTS, ADD_POSTS } from "./types";
+import {GET_POSTS, DELETE_POSTS, ADD_POSTS, GET_ERRORS} from "./types";
 
 // GET POSTS
 export const getPosts = () => dispatch => {

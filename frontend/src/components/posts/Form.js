@@ -63,3 +63,4 @@ export class Form extends Component {
 }
 
 export default connect(null, { addPosts })(Form);
+
