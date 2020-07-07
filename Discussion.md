@@ -290,7 +290,12 @@ Docker:
 Docker?
 - What are Docker containers and what are the pros and cons of using them?
 What is the difference between ADD and COPY with Docker?
+
 - What is a .dockerignore file used for?
+
+dockerignore file is similar to gitignore file, used by the git tool. similarly to . gitignore file, it allows you to 
+specify a pattern for files and folders that should be ignored by the Docker client when generating a build context.
+
 - What is Kubernetes and why didn’t we use it?
 
 Deployment:
@@ -329,10 +334,20 @@ It is used to be notified of errors happening in application.
 
 - What is Cloudflare and what is it used for?
 
+Cloudflare, Inc. is an American web-infrastructure and website-security company, providing content-delivery-network 
+services, DDoS mitigation, Internet security, and distributed domain-name-server services.
+
 - What is SendGrid and what is it used for?
 
-- What is the difference between a DNS A record and a CNAME record?
+SendGrid is a cloud-based SMTP provider that allows you to send email without having to maintain email servers. 
+SendGrid manages all of the technical details, from scaling the infrastructure to ISP outreach and reputation monitoring 
+to whitelist services and real time analytics.
 
+- What is the difference between a DNS A record and a CNAME record?
+The A and CNAME records are the two common ways to map a host name (“name”) to one or more IP addresses. 
+There are important differences between these two records.
+The A record points a name to a specific IP.
+The CNAME record points a name to another name instead of to an IP.
 
 Meta:
 - What are some of the mistakes or difficulties you encountered in developing
@@ -341,6 +356,7 @@ these 2 assignments?
 In assignment 1, when I pushed the web application to HEROKU, an error occurred and it was not properly modified until 
 the assignment was due.
 In assignment 2, 
+
 - What have you learned from this course that you think might be useful in your
 career?
 

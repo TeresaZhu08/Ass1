@@ -4,9 +4,8 @@ import ReactDom from 'react-dom';
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from "react-alert-template-basic";
 
-import header from "./layout/header";
+import Header from "./layout/header";
 import Dashboard from "./posts/Dashboard";
-import alerts from "./layout/alerts";
 
 import { Provider } from 'react-redux';
 import store from '../store';
@@ -23,8 +22,7 @@ class App extends Component {
             <Provider store={store}>
                 <AlertProvider template={AlertTemplate} {...alertOptions}>
                     <Fragment>
-                        <header />
-                        <alerts />
+                        <Header />
                         <div className="container">
                             <Dashboard />
                         </div>

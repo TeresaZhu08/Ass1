@@ -4,7 +4,7 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 from .api import PostViewSet
 
 router = routers.DefaultRouter()
-router.register('api/posts/', PostViewSet, 'posts')
+router.register('api/posts', PostViewSet, 'posts')
 
 urlpatterns = [
     path('', PostListView.as_view(), name='MyPage'),
