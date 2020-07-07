@@ -5,7 +5,7 @@ import {GET_POSTS, DELETE_POSTS, ADD_POSTS } from "./types";
 // GET POSTS
 export const getPosts = () => dispatch => {
     axios
-        .get('/api/posts/')
+        .get('/api/leads/')
         .then((res) => {
             dispatch({
                 type: GET_POSTS,
@@ -19,7 +19,7 @@ export const getPosts = () => dispatch => {
 // DELETE POSTS
 export const deletePosts = id => dispatch => {
     axios
-        .delete('/api/posts/${id}/')
+        .delete('/api/leads/${id}/')
         .then((res) => {
            // dispatch(createMessage({ deletePosts: 'Post Deleted' }));
             dispatch({
@@ -33,7 +33,7 @@ export const deletePosts = id => dispatch => {
 // ADD POSTS
 export const addPosts = (post) => dispatch => {
     axios
-        .post('/api/posts/', post)
+        .post('/api/leads/', post)
         .then((res) => {
            // dispatch(createMessage({ addPosts: 'Post Added' }));
              dispatch({
