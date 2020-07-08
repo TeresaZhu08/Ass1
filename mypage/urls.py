@@ -1,10 +1,14 @@
 from django.urls import path, include
 from rest_framework import routers
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView
-from .api import PostViewSet
+from .api import PostListViewSet, PostCreateViewSet, PostRetrieveViewSet, PostUpdateViewSet, PostDeleteViewSet
 
 router = routers.DefaultRouter()
-router.register('api/posts', PostViewSet, 'posts')
+router.register('posts', PostListViewSet, 'posts')
+router.register('posts/new', PostCreateViewSet, 'create')
+router.register('posts/<int:pk>', PostRetrieveViewSet, 'detail')
+router.register('posts/<int:pk>/update', PostUpdateViewSet, 'update')
+router.register('posts/<int:pk>/delete', PostDeleteViewSet, 'delete')
 
 urlpatterns = [
     path('', PostListView.as_view(), name='MyPage'),
@@ -13,10 +17,6 @@ urlpatterns = [
     path('post/<int:pk>/update', PostUpdateView.as_view(), name='post-update'),
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
+
 ]
-
-
-
-
-
