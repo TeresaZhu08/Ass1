@@ -28,9 +28,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+# DEBUG can be True/False or 1/0
+DEBUG = int(os.environ.get('DEBUG', default=1))
 
-ALLOWED_HOSTS = ['webdev-ass1.herokuspp.com']
+ALLOWED_HOSTS = ['webdev-ass1.herokuapp.com']
 
 
 # Application definition
