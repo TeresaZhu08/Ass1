@@ -247,6 +247,7 @@ It is extremely configurable to support a wide variety of use cases. Most common
 install, and develop node programs.
 
 - What is ES6? List the names of 3 features that ES6 provides.
+
 ES6 stands for ECMAScript 6.
 ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, 
 and is also known as ECMAScript 2015.
@@ -263,6 +264,7 @@ web or mobile application. It is also used to reuse UI components. React enables
 that can change your data without reloading your page. 
 
 - List two popular alternative Javascript libraries to ReactJS.
+
 InfernoJS
 Preact
 
@@ -285,11 +287,32 @@ Material-UI is the most popular React UI component library. It's inspired by and
 and has a lot of prebuilt React components, which can help you create React apps in no time.
 
 Docker:
-- Why do we run apt-get update && apt-get install -y in one command when using
+- Why do we run apt-get update && apt-get install -y in one command when using Docker?
 
-Docker?
 - What are Docker containers and what are the pros and cons of using them?
-What is the difference between ADD and COPY with Docker?
+
+Docker containers are massively popular — and for good reason. But like any technology, Docker is not a silver bullet. 
+It has its downsides, and it's important to understand them if you're considering migrating to Docker.
+Pros:
+Docker enables more efficient use of system resources.
+Docker enables faster software delivery cycles.
+Docker enables application portability.
+Docker shines for microservices architecture.
+Cons:
+Containers don't run at bare-metal speeds.
+The container ecosystem is fractured.
+Persistent data storage is complicated.
+Graphical applications don't work well.
+Not all applications benefit from containers.
+
+-What is the difference between ADD and COPY with Docker?
+
+COPY and ADD are both Dockerfile instructions that serve similar purposes. They let you copy files from a specific 
+location into a Docker image.
+COPY takes in a src and destination. It only lets you copy in a local file or directory from your host (the machine 
+building the Docker image) into the Docker image itself.
+ADD lets you do that too, but it also supports 2 other sources. First, you can use a URL instead of a local 
+file / directory. Secondly, you can extract a tar file from the source directly into the destination.
 
 - What is a .dockerignore file used for?
 
@@ -297,6 +320,14 @@ dockerignore file is similar to gitignore file, used by the git tool. similarly 
 specify a pattern for files and folders that should be ignored by the Docker client when generating a build context.
 
 - What is Kubernetes and why didn’t we use it?
+
+Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, 
+that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. 
+Kubernetes services, support, and tools are widely available.
+Kubernetes is not a traditional, all-inclusive PaaS (Platform as a Service) system. Since Kubernetes operates at the 
+container level rather than at the hardware level, it provides some generally applicable features common to PaaS 
+offerings, such as deployment, scaling, load balancing, and lets users integrate their logging, monitoring, and 
+alerting solutions.
 
 Deployment:
 - What is Amazon S3 used for?
@@ -354,9 +385,9 @@ Meta:
 these 2 assignments?
 
 In assignment 1, when I pushed the web application to HEROKU, an error occurred and it was not properly modified until 
-the assignment was due.
+the assignment was due. But my project can open on heroku local web.
 In assignment 2, when I try to push the project to Docker, it shows pushed successful but I cannot open the page on 
-0.0.0.0:8000.
+0.0.0.0:8000. But my project can run on gunicorn Ass1.wsgi:application --bind 0.0.0.0:8000
 
 - What have you learned from this course that you think might be useful in your
 career?

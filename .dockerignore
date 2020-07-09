@@ -1,0 +1,14 @@
+# comment
+*/temp*
+*/*/temp*
+temp?
+
+*.md
+README-secret.md
+Discussion.md
+!README*.md
+
+__pycache__/
+*.pyc
+env/
+db.sqlite3
