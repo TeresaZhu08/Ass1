@@ -96,3 +96,90 @@ Estimate 5 hours
 
 13:00 Still have problems to connect to Heroku
 Stop @ 15:00 pm
+
+June 15th 2020 - 10:00 am
+Start to creat another branch for github
+Estimate 1 hours
+
+Everything create successfully
+Stop @ 11:00 pm
+
+June 16th 2020 - 11:00 am
+Start to convet some interface to REST framework
+Estimate 3 hours
+
+Create a list post page and a post new page in REST framework
+Stop @ 14:00 pm
+
+June 20th 2020 - 13:00 pm
+Start to convet retrieve, update and delete interface to REST framework
+Estimate 4 hours
+
+16:00 Cannot get post id
+Stop @ 17:00 pm
+
+June 24th 2020 - 13:00 pm
+Start to create React project
+Estimate 2 hours
+
+Everything create successfully
+Stop @ 15:00 pm
+
+June 29th 2020 - 12:00 pm
+Start to recreate django project
+Fix some bugs in django project
+Estimate 5 hours
+
+Everything create successfully
+Stop @ 17:00 pm
+
+June 30th 2020 - 12:00 pm
+Continue to recreate django project
+Estimate 6 hours
+
+Everything create successfully
+Stop @ 18:00 pm
+
+July 1st 2020 - 11:00 am
+Finish django project and set AWS for the project
+Estimate 4 hours
+
+Everything create successfully
+Stop @ 15:00 pm
+
+July 2nd 2020 - 12:00 pm
+Reset REST framework
+Estimate 5 hours
+
+15:00 Still cannot get post id
+Stop @ 17:00 pm
+
+July 5th 2020 - 11:00 am
+Create React project
+Estimate 6 hours
+
+15:00 Still cannot get post id
+Stop @ 17:00 pm
+
+July 6th 2020 - 12:00 pm
+Create Docker
+Estimate 4 hours
+
+14:00 Successful create Docker container
+15:00 Successful run on gunicorn
+16:00 Stuck on  docker
+Stop @ 16:00 pm
+
+July 7th 2020 - 13:00 pm
+Finish Discussion.md
+Estimate 2.5 hours
+
+Everything create successfully
+Stop @ 15:30 pm
+
+July 8th 2020 - 12:00 pm
+Try again to run on docker
+Estimate 4 hours
+
+Still stuck on docker
+Stop @ 16:00 pm
