@@ -355,7 +355,8 @@ these 2 assignments?
 
 In assignment 1, when I pushed the web application to HEROKU, an error occurred and it was not properly modified until 
 the assignment was due.
-In assignment 2, 
+In assignment 2, when I try to push the project to Docker, it shows pushed successful but I cannot open the page on 
+0.0.0.0:8000.
 
 - What have you learned from this course that you think might be useful in your
 career?

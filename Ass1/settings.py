@@ -32,7 +32,7 @@ SECRET_KEY = '7956552d0266c7fbfb46cc2c2913093eb6628256367a1bcc'
 # DEBUG can be True/False or 1/0
 DEBUG = int(os.environ.get('DEBUG', default=1))
 
-ALLOWED_HOSTS = ['webdev-ass1.herokuapp.com']
+ALLOWED_HOSTS = ['https://webdev-ass1.herokuapp.com/']
 
 
 # Application definition
